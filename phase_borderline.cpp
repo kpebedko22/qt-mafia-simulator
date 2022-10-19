@@ -17,8 +17,8 @@ void Phase_Borderline::update_can_execute(QList<Player*> players_){
 
 	for (int i = 0; i < players_.count(); i++)
 		if (! players_[i]->role) without_role++; else{
-			if (players_[i]->role->is_mafia() && players_[i]->is_alive()) num_mafia++;
-			if (!players_[i]->role->is_mafia() && players_[i]->is_alive()) num_civilians++;
+			if (players_[i]->role->is(Role::Type::MAFIA) && players_[i]->is_alive()) num_mafia++;
+			if (!players_[i]->role->is(Role::Type::MAFIA) && players_[i]->is_alive()) num_civilians++;
 		}
 
 	if (without_role != 0){ stage++; can_execute = true; return; }
@@ -122,7 +122,7 @@ void Phase_Borderline::phase_3(QList<Player*> players_){
 
 	for (int i = 0; i < players_.count(); i++)
 		if (players_[i]->is_alive()){
-			if (players_[i]->role->is_mafia())
+			if (players_[i]->role->is(Role::Type::MAFIA))
 				players_[i]->set_emotion_happy_string();
 			else
 				players_[i]->set_emotion_sad_string();
@@ -134,7 +134,7 @@ void Phase_Borderline::phase_4(QList<Player*> players_){
 	log_text = "";
 
 	for (int i = 0; i < players_.count(); i++)
-		if (players_[i]->is_alive() && !players_[i]->role->is_mafia())
+		if (players_[i]->is_alive() && !players_[i]->role->is(Role::Type::MAFIA))
 			players_[i]->set_emotion_happy_string();
 }
 

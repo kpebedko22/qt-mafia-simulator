@@ -1,9 +1,9 @@
 #include "player.h"
-#include "mafia.h"
-#include "civilian.h"
-#include "courtesan.h"
-#include "detective.h"
-#include "doctor.h"
+#include "roles/mafia.h"
+#include "roles/civilian.h"
+#include "roles/courtesan.h"
+#include "roles/detective.h"
+#include "roles/doctor.h"
 #include <QRandomGenerator>
 #include <QtCore/qmath.h>
 

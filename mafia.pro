@@ -27,37 +27,37 @@ SOURCES += \
         mainwindow.cpp \
     player.cpp \
     role.cpp \
-    mafia.cpp \
     game.cpp \
-    civilian.cpp \
-    courtesan.cpp \
-    detective.cpp \
-    doctor.cpp \
     phase.cpp \
     phase_courtesan.cpp \
     phase_borderline.cpp \
     phase_mafia.cpp \
     phase_doctor.cpp \
     phase_detective.cpp \
-    phase_day.cpp
+    phase_day.cpp \
+    roles/civilian.cpp \
+    roles/courtesan.cpp \
+    roles/detective.cpp \
+    roles/doctor.cpp \
+    roles/mafia.cpp
 
 HEADERS += \
         mainwindow.h \
     player.h \
     role.h \
-    mafia.h \
     game.h \
-    civilian.h \
-    courtesan.h \
-    detective.h \
-    doctor.h \
     phase.h \
     phase_courtesan.h \
     phase_borderline.h \
     phase_mafia.h \
     phase_doctor.h \
     phase_detective.h \
-    phase_day.h
+    phase_day.h \
+    roles/civilian.h \
+    roles/courtesan.h \
+    roles/detective.h \
+    roles/doctor.h \
+    roles/mafia.h
 
 FORMS += \
         mainwindow.ui
