@@ -35,7 +35,7 @@ void MainWindow::on_pushButton_start_game_clicked() {
     int rnd = 12;//QRandomGenerator::global()->bounded(static_cast<int>(3), static_cast<int>(13));
 
     QList <Player_info> list_of_info = generate_info(rnd);
-    current_game = new Game(rnd, list_of_info);
+    current_game = new Game(list_of_info);
 
     make_labels_for_info_about_players(rnd);
     make_labels_for_players_speech(rnd);

@@ -2,9 +2,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 
-Doctor::Doctor() {}
+Doctor::Doctor() = default;
 
-Doctor::~Doctor() {}
+Doctor::~Doctor() = default;
 
 Role::Type Doctor::getType() {
     return Role::Type::DOCTOR;

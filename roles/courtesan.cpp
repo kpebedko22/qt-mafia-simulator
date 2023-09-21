@@ -2,9 +2,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 
-Courtesan::Courtesan() {}
+Courtesan::Courtesan() = default;
 
-Courtesan::~Courtesan() {}
+Courtesan::~Courtesan() = default;
 
 Role::Type Courtesan::getType() {
     return Role::Type::COURTESAN;
@@ -57,7 +57,7 @@ Player *Courtesan::nightChoice(Player *player, QList<Player *> players) {
         // 2. создадим доп список с живыми, и без куртизанки
         // и в нем выберем рандомного
 
-        QList < Player * > tmp_list;
+        QList<Player *> tmp_list;
 
         for (int i = 0; i < players.count(); i++)
             if (players[i] != player && players[i]->is_alive())

@@ -7,13 +7,13 @@ class Doctor : public Role {
 public:
     Doctor();
 
-    ~Doctor();
+    ~Doctor() override;
 
-    Type getType();
+    Type getType() override;
 
-    Player *dayChoice(Player *player, QList<Player *> players);
+    Player *dayChoice(Player *player, QList<Player *> players) override;
 
-    Player *nightChoice(Player *player, QList<Player *> players);
+    Player *nightChoice(Player *player, QList<Player *> players) override;
 };
 
 #endif // DOCTOR_H

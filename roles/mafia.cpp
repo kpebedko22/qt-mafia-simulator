@@ -2,9 +2,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 
-Mafia::Mafia() {}
+Mafia::Mafia() = default;
 
-Mafia::~Mafia() {}
+Mafia::~Mafia() = default;
 
 Role::Type Mafia::getType() {
     return Role::Type::MAFIA;

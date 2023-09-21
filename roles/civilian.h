@@ -7,13 +7,13 @@ class Civilian : public Role {
 public:
     Civilian();
 
-    ~Civilian();
+    ~Civilian() override;
 
-    Type getType();
+    Type getType() override;
 
-    Player *dayChoice(Player *player, QList<Player *> players);
+    Player *dayChoice(Player *player, QList<Player *> players) override;
 
-    Player *nightChoice(Player *player, QList<Player *> players);
+    Player *nightChoice(Player *player, QList<Player *> players) override;
 };
 
 #endif // CIVILIAN_H

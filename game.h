@@ -4,13 +4,14 @@
 #include <player.h>
 
 class Phase;
+class Stage;
 struct Voting;
 
 class Game {
 public:
 	Game();
 	~Game();
-	Game(int num_players_, QList<Player_info> players_info_);
+	Game(QList<Player_info> players_info_);
 
 	void step();
 	void next_round();
@@ -31,16 +32,16 @@ public:
 	QList<Player*> players;				// список указателей на игроков
 
 private:
-	int num_players;					// кол-во тех или иных фракций
-	int num_mafia;						// и так всё понятно
-	int num_civilians;					//
-	int num_detectives;					//
-	int num_doctors;					//
-	int num_courtesans;					//
-	int mafia_win;						// кол-во выигрышей мафии
-	int civilians_win;					// кол-во выигрышей мирных
+	int num_players{};					// кол-во тех или иных фракций
+	int num_mafia{};						// и так всё понятно
+	int num_civilians{};					//
+	int num_detectives{};					//
+	int num_doctors{};					//
+	int num_courtesans{};					//
+	int mafia_win{};						// кол-во выигрышей мафии
+	int civilians_win{};					// кол-во выигрышей мирных
 
-	bool game_over;
+	bool game_over{};
 
 	QList<Phase*> stages;				// список наследников Phase, хранит всех наследников
 										// в step() при каждом заходе берет из начала элемент
@@ -56,6 +57,8 @@ private:
 	QString log_text;
 
 	void generate_players(QList<Player_info> players_info_);
+
+    QList<Stage*> stagesList;
 };
 
 #endif // GAME_H

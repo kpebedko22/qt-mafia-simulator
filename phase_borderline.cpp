@@ -11,6 +11,7 @@ Phase_Borderline::~Phase_Borderline(){}
 Phase::Type Phase_Borderline::get_type(){ return BORDERLINE_PHASE; }
 
 void Phase_Borderline::update_can_execute(QList<Player*> players_){
+    // FIXME: moved to stages classes
 	int without_role = 0;
 	int num_mafia = 0;
 	int num_civilians = 0;
@@ -55,6 +56,7 @@ void Phase_Borderline::execute(QList<Player*> players_){
 }
 
 void Phase_Borderline::phase_1(QList<Player*> players_){
+    // FIXME: fixed role_assignment_stage
 	narrator_speech = "*ведущий перемешивает карты*\n*карты раздаются игрокам*\n*игра начинается*";
 	log_text = "Раздача карт\n";
 
@@ -103,6 +105,7 @@ void Phase_Borderline::phase_1(QList<Player*> players_){
 }
 
 void Phase_Borderline::phase_2(QList<Player*> players_){
+    // FIXME: fixed welcome_game_stage
 	narrator_speech = "Приветствую в игре Мафия. "
 					  "Сегодня мы собрались в дружной компании, "
 					  "у каждого своя роль. Правила игры знакомы каждому. "
@@ -117,6 +120,7 @@ void Phase_Borderline::phase_2(QList<Player*> players_){
 }
 
 void Phase_Borderline::phase_3(QList<Player*> players_){
+    // FIXME: fixed mafia_win_stage
 	narrator_speech = "Поздравляем мафию с победой, она смогла расправиться с мирными жителями и установить свои правила в этом городе!";
 	log_text = "";
 
@@ -130,6 +134,7 @@ void Phase_Borderline::phase_3(QList<Player*> players_){
 }
 
 void Phase_Borderline::phase_4(QList<Player*> players_){
+    // FIXME: fixed civilian_win_stage
 	narrator_speech = "Поздравляем мирных жителей города N с победой над злобной мафией!";
 	log_text = "";
 

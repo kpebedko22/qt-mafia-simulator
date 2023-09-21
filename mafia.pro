@@ -39,7 +39,15 @@ SOURCES += \
     roles/courtesan.cpp \
     roles/detective.cpp \
     roles/doctor.cpp \
-    roles/mafia.cpp
+    roles/mafia.cpp \
+    stage.cpp \
+    stages/civilian_win_stage.cpp \
+    stages/courtesans/courtesan_asleep_stage.cpp \
+    stages/courtesans/courtesan_awake_stage.cpp \
+    stages/courtesans/courtesan_choice_stage.cpp \
+    stages/mafia_win_stage.cpp \
+    stages/role_assignment_stage.cpp \
+    stages/welcome_game_stage.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -57,7 +65,15 @@ HEADERS += \
     roles/courtesan.h \
     roles/detective.h \
     roles/doctor.h \
-    roles/mafia.h
+    roles/mafia.h \
+    stage.h \
+    stages/civilian_win_stage.h \
+    stages/courtesans/courtesan_asleep_stage.h \
+    stages/courtesans/courtesan_awake_stage.h \
+    stages/courtesans/courtesan_choice_stage.h \
+    stages/mafia_win_stage.h \
+    stages/role_assignment_stage.h \
+    stages/welcome_game_stage.h
 
 FORMS += \
         mainwindow.ui

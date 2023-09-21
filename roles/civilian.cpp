@@ -2,9 +2,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 
-Civilian::Civilian() {}
+Civilian::Civilian() = default;
 
-Civilian::~Civilian() {}
+Civilian::~Civilian() = default;
 
 Role::Type Civilian::getType() {
     return Role::Type::CIVILIAN;

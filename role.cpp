@@ -1,8 +1,8 @@
 #include "role.h"
 
-Role::Role() {}
+Role::Role() = default;
 
-Role::~Role() {}
+Role::~Role() = default;
 
 bool Role::is(Type type) {
     return this->getType() == type;

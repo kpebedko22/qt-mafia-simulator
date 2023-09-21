@@ -2,9 +2,9 @@
 #include "player.h"
 #include <QRandomGenerator>
 
-Detective::Detective() {}
+Detective::Detective() = default;
 
-Detective::~Detective() {}
+Detective::~Detective() = default;
 
 Role::Type Detective::getType() {
     return Role::Type::DETECTIVE;
